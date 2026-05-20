@@ -1,2 +1,3 @@
-# edcferreira-git.github.io
-EAN - 2026
+theme: jekyll-theme-minimal
+title: EANs's homepage
+description: EAN friends
