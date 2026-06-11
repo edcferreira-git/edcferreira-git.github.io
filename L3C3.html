@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GIF Dinâmico</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+	
+</head>
+<body>
+
+<script>
+
+    fetch("dataqui.txt")
+    	.then(r => r.text())
+    	.then(texto => {
+        	const limpo = texto.trim();
+
+        	// pega do 41º caractere, 4 caracteres
+        	const nome = limpo.substring(40, 44);
+
+        	const gif = nome + ".gif";
+
+        	const img = document.createElement("img");
+        	img.src = gif;
+        	document.body.appendChild(img);
+
+        })
+        .catch(err => {
+            console.error("Erro ao carregar dataqui.txt:", err);
+        });
+</script>
+
+</body>
+</html>
