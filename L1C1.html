@@ -22,26 +22,28 @@
 <body>
 
 <script>
+fetch("dataqui.txt")
+  .then(r => r.text())
+  .then(texto => {
+    const limpo = texto.trim();
+    const nome = limpo.substring(0, 4);
+    const gif = nome + ".gif";
 
-    fetch("dataqui.txt")
-    	.then(r => r.text())
-    	.then(texto => {
-        	const limpo = texto.trim();
+    const img = document.createElement("img");
+    img.src = gif;
 
-        	// pega do 1º caractere, 4 caracteres
-        	const nome = limpo.substring(0, 4);
+    img.onerror = () => {
+      console.error("Imagem não encontrada:", gif);
+      img.remove();
+    };
 
-        	const gif = "tree/main/" + nome + ".gif";
-
-        	const img = document.createElement("img");
-        	img.src = gif;
-        	document.body.appendChild(img);
-
-        })
-        .catch(err => {
-            console.error("Erro ao carregar dataqui.txt:", err);
-        });
+    document.body.appendChild(img);
+  })
+  .catch(err => {
+    console.error("Erro ao carregar dataqui.txt:", err);
+  });
 </script>
+
 
 </body>
 </html>
