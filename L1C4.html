@@ -70,7 +70,7 @@ const nome = limpo.substring(inicio, inicio + 4);
             const gif = nome + ".gif?t=" + Date.now();
 
             const img = document.createElement("img");
-            img.src = gif;
+            img.src = "gifplatesl/" + gif;
             document.body.appendChild(img);
         })
         .catch(err => {
