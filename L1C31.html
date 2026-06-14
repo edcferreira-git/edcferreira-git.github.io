@@ -30,36 +30,36 @@
         .then(texto => {
             const limpo = texto.trim();
             const segundo = new Date().getSeconds();
-let inicio = 12;
+let inicio = 120;
 
 // 00–09
 if (segundo >= 0 && segundo <= 9) {
-    inicio = 12;
+    inicio = 120;
 }
 
 // 10–19
 else if (segundo >= 10 && segundo <= 19) {
-    inicio = (4*43)+12;   // 8
+    inicio = (4*43)+120;   // 8
 }
 
 // 20–29
 else if (segundo >= 20 && segundo <= 29) {
-    inicio = (4*43)+(4*43)+12;   // 12
+    inicio = (4*43)+(4*43)+120;   // 12
 }
 
 // 30–39
 else if (segundo >= 30 && segundo <= 39) {
-    inicio = (4*43)+(4*43)+(4*43)+12;  // 16
+    inicio = (4*43)+(4*43)+(4*43)+120;  // 16
 }
 
 // 40–49
 else if (segundo >= 40 && segundo <= 49) {
-    inicio = (4*43)+(4*43)+(4*43)+(4*43)+12;  // 20
+    inicio = (4*43)+(4*43)+(4*43)+(4*43)+120;  // 20
 }
 
 // 50–59
 else if (segundo >= 50 && segundo <= 59) {
-    inicio = (4*43)+(4*43)+(4*43)+(4*43)+(4*43)+12;  // 24
+    inicio = (4*43)+(4*43)+(4*43)+(4*43)+(4*43)+120;  // 24
 }
 
 const nome = limpo.substring(inicio, inicio + 4);

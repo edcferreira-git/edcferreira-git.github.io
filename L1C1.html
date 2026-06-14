@@ -29,7 +29,42 @@
         .then(r => r.text())
         .then(texto => {
             const limpo = texto.trim();
-            const nome = limpo.substring(0, 4);
+            const segundo = new Date().getSeconds();
+let inicio = 0;
+
+// 00–09
+if (segundo >= 0 && segundo <= 9) {
+    inicio = 0;
+}
+
+// 10–19
+else if (segundo >= 10 && segundo <= 19) {
+    inicio = 4*43;   // 8
+}
+
+// 20–29
+else if (segundo >= 20 && segundo <= 29) {
+    inicio = (4*43)+(4*43);   // 12
+}
+
+// 30–39
+else if (segundo >= 30 && segundo <= 39) {
+    inicio = (4*43)+(4*43)+(4*43);  // 16
+}
+
+// 40–49
+else if (segundo >= 40 && segundo <= 49) {
+    inicio = (4*43)+(4*43)+(4*43)+(4*43);  // 20
+}
+
+// 50–59
+else if (segundo >= 50 && segundo <= 59) {
+    inicio = (4*43)+(4*43)+(4*43)+(4*43)+(4*43);  // 24
+}
+
+const nome = limpo.substring(inicio, inicio + 4);
+
+
             
             // Força o navegador a baixar o GIF sem cache
             const gif = nome + ".gif?t=" + Date.now();
