@@ -70,8 +70,14 @@ const nome = limpo.substring(inicio, inicio + 4);
             const gif = nome + ".gif?t=" + Date.now();
 
             const img = document.createElement("img");
-            img.src = gif;
+		if (nome < "Ato-") {
+            	    img.src = "gifplatesn/" + gif;
+		}
+		else {
+		    img.src = "gifplatesl/" + gif;
+		}
             document.body.appendChild(img);
+
         })
         .catch(err => {
             console.error("Erro ao carregar dataqui.txt:", err);
