@@ -18,7 +18,12 @@
         }
     </style>
 </head>
-<body>
+<body style="
+    background-image: url('gifplatesn/-to-.gif');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+">
 
 <script>
 
@@ -63,24 +68,25 @@ else if (segundo >= 50 && segundo <= 59) {
 }
 
 const nome = limpo.substring(inicio, inicio + 4);
-
-
             
             // Força o navegador a baixar o GIF sem cache
             const gif = nome + ".gif?t=" + Date.now();
 
             const img = document.createElement("img");
 		if (nome < "Ato-") {
-            	    img.src = "gifplatesn/" + gif;
+            img.src = "gifplatesn/" + gif;
+
 		}
 		else {
 		    img.src = "gifplatesl/" + gif;
+
 		}
             document.body.appendChild(img);
         })
         .catch(err => {
             console.error("Erro ao carregar dataqui.txt:", err);
         });
+
 
 </script>
 
