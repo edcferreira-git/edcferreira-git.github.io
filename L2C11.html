@@ -19,6 +19,7 @@
     </style>
 </head>
 <body style="
+    background-image: url('gifplatesn/-to-.gif');
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,44 +27,43 @@
 
 <script>
 
-    // Força o navegador a baixar o TXT sem cache
-    const urlTXT = "dataqui.txt?t=" + Date.now();
+    const urlTXT = "dataquilin2.txt";
 
     fetch(urlTXT)
         .then(r => r.text())
         .then(texto => {
             const limpo = texto.trim();
             const segundo = new Date().getSeconds();
-let inicio = 0;
+let inicio = 40;
 
 // 00–09
 if (segundo >= 0 && segundo <= 9) {
-    inicio = 0;
+    inicio = 40;
 }
 
 // 10–19
 else if (segundo >= 10 && segundo <= 19) {
-    inicio = 4*43;   // 8
+    inicio = (4*43)+40;   // 8
 }
 
 // 20–29
 else if (segundo >= 20 && segundo <= 29) {
-    inicio = (4*43)+(4*43);   // 12
+    inicio = (4*43)+(4*43)+40;   // 12
 }
 
 // 30–39
 else if (segundo >= 30 && segundo <= 39) {
-    inicio = (4*43)+(4*43)+(4*43);  // 16
+    inicio = (4*43)+(4*43)+(4*43)+40;  // 16
 }
 
 // 40–49
 else if (segundo >= 40 && segundo <= 49) {
-    inicio = (4*43)+(4*43)+(4*43)+(4*43);  // 20
+    inicio = (4*43)+(4*43)+(4*43)+(4*43)+40;  // 20
 }
 
 // 50–59
 else if (segundo >= 50 && segundo <= 59) {
-    inicio = (4*43)+(4*43)+(4*43)+(4*43)+(4*43);  // 24
+    inicio = (4*43)+(4*43)+(4*43)+(4*43)+(4*43)+40;  // 24
 }
 
 const nome = limpo.substring(inicio, inicio + 4);
@@ -79,37 +79,13 @@ const nome = limpo.substring(inicio, inicio + 4);
 		}
 		else {
 		    img.src = "gifplatesl/" + gif;
-
 		}
             document.body.appendChild(img);
+
         })
         .catch(err => {
-            console.error("Erro ao carregar dataqui.txt:", err);
+            console.error("Erro ao carregar dataquilin2.txt:", err);
         });
-
-</script>
-
-<script>
-
-    // 1) A página sempre começa com este fundo
-    document.body.style.backgroundImage = "url('-to-.gif')";
-
-    // 2) Sua constante dinâmica
-    const backplate = "ABC0";   // exemplo — o último caractere é o que importa
-
-    // 3) Pega o último caractere
-    const ultimo = backplate.slice(-1);
-
-    // 4) Decide se é número ou letra
-    const ehNumero = /^[0-9]$/.test(ultimo);
-    const pasta = ehNumero ? "gifplatesn" : "gifplatesl";
-
-    // 5) Monta o nome do arquivo XtoX.gif
-    const arquivo = `${ultimo}to${ultimo}.gif`;
-
-    // 6) Troca dinamicamente o fundo
-    const urlFinal = `${pasta}/${arquivo}?t=${Date.now()}`;
-    document.body.style.backgroundImage = `url('${urlFinal}')`;
 
 </script>
 
