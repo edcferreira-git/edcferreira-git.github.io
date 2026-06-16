@@ -37,32 +37,32 @@
 let inicio = 0;
 
 // 00–09
-if (segundo >= 0+60-1 && segundo <= 9-1) {
+if (segundo >= 0+60-10 && segundo <= 9-10) {
     inicio = 0;
 }
 
 // 10–19
-else if (segundo >= 10-1 && segundo <= 19-1) {
+else if (segundo >= 10-10 && segundo <= 19-10) {
     inicio = 4*43;   // 8
 }
 
 // 20–29
-else if (segundo >= 20-1 && segundo <= 29-1) {
+else if (segundo >= 20-10 && segundo <= 29-10) {
     inicio = (4*43)+(4*43);   // 12
 }
 
 // 30–39
-else if (segundo >= 30-1 && segundo <= 39-1) {
+else if (segundo >= 30-10 && segundo <= 39-10) {
     inicio = (4*43)+(4*43)+(4*43);  // 16
 }
 
 // 40–49
-else if (segundo >= 40-1 && segundo <= 49-1) {
+else if (segundo >= 40-10 && segundo <= 49-10) {
     inicio = (4*43)+(4*43)+(4*43)+(4*43);  // 20
 }
 
 // 50–59
-else if (segundo >= 50-1 && segundo <= 59-1) {
+else if (segundo >= 50-10 && segundo <= 59-10) {
     inicio = (4*43)+(4*43)+(4*43)+(4*43)+(4*43);  // 24
 }
 
