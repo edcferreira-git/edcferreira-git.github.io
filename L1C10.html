@@ -41,8 +41,8 @@ fetch(urlTXT)
         let minuto = new Date().getMinutes();
         segundo = minuto * 60 + segundo;
 
-        // Normaliza para dentro de um ciclo de 200 segundos
-        const ciclo = segundo % 200;
+        // Normaliza para dentro de um ciclo de 360 segundos
+        const ciclo = segundo % 360;
 
         // Cada bloco tem 60 segundos
         let bloco = Math.floor(ciclo / 60);

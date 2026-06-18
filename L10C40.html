@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GIF Dinâmico</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('gifplatesn/-to-.gif');">
+
+<script>
+
+const urlTXT = "dataquilin10.txt";
+
+fetch(urlTXT)
+    .then(r => r.text())
+    .then(texto => {
+
+        const limpo = texto.trim();
+
+        // Tempo total em segundos
+        let segundo = new Date().getSeconds();
+        let minuto = new Date().getMinutes();
+        segundo = minuto * 60 + segundo;
+
+        // Normaliza para dentro de um ciclo de 360 segundos
+        const ciclo = segundo % 360;
+
+        // Cada bloco tem 60 segundos
+        let bloco = Math.floor(ciclo / 60);
+
+        // Garante que o bloco máximo seja 5
+        if (bloco > 5) bloco = 5;
+
+        // Cada bloco soma 4*43 caracteres
+        const inicio = bloco * (4 * 43);
+
+        // Extrai o nome do GIF
+        const nome = limpo.substring(inicio + 156, inicio + 4 + 156);
+
+        // Força o navegador a não usar cache
+        const gif = nome + ".gif?t=" + Date.now();
+
+        // Cria a imagem
+        const img = document.createElement("img");
+
+        // Escolhe a pasta correta
+        if (nome < "Ato-") {
+            img.src = "gifplatesn/" + gif;
+        } else {
+            img.src = "gifplatesl/" + gif;
+        }
+
+        document.body.appendChild(img);
+    })
+    .catch(err => {
+        console.error("Erro ao carregar dataquilin10.txt:", err);
+    });
+
+</script>
+
+</body>
+</html>
