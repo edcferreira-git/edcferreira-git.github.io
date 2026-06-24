@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela com Iframes</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;   /* impede rolagem */
+            height: 100%;
+        }
+        table {
+            border: 0px solid #3D3938;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        td {
+            border: 1px solid black;
+            padding: 0;
+            height: calc((100vw / 43) * 1.136942675159236);
+
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+
+    <script>
+        function verificarHorario() {
+            const agora = new Date();
+            const segundo = agora.getSeconds();
+
+            if (segundo === 36) {
+                location.reload();
+            }
+        }
+
+        // verifica a cada 1 segundo
+        setInterval(verificarHorario, 1000);
+    </script>
+
+</head>
+<body style="background-color: #54504F; color: white;">
+
+<table>
+            <td><iframe src="L7C1.html"></iframe></td>
+            <td><iframe src="L7C2.html"></iframe></td>
+            <td><iframe src="L7C3.html"></iframe></td>
+            <td><iframe src="L7C4.html"></iframe></td>
+            <td><iframe src="L7C5.html"></iframe></td>
+            <td><iframe src="L7C6.html"></iframe></td>
+            <td><iframe src="L7C7.html"></iframe></td>
+            <td><iframe src="L7C8.html"></iframe></td>
+            <td><iframe src="L7C9.html"></iframe></td>
+            <td><iframe src="L7C10.html"></iframe></td>
+            <td><iframe src="L7C11.html"></iframe></td>
+            <td><iframe src="L7C12.html"></iframe></td>
+            <td><iframe src="L7C13.html"></iframe></td>
+            <td><iframe src="L7C14.html"></iframe></td>
+            <td><iframe src="L7C15.html"></iframe></td>
+            <td><iframe src="L7C16.html"></iframe></td>
+            <td><iframe src="L7C17.html"></iframe></td>
+            <td><iframe src="L7C18.html"></iframe></td>
+            <td><iframe src="L7C19.html"></iframe></td>
+            <td><iframe src="L7C20.html"></iframe></td>
+            <td><iframe src="L7C21.html"></iframe></td>
+            <td><iframe src="L7C22.html"></iframe></td>
+            <td><iframe src="L7C23.html"></iframe></td>
+            <td><iframe src="L7C24.html"></iframe></td>
+            <td><iframe src="L7C25.html"></iframe></td>
+            <td><iframe src="L7C26.html"></iframe></td>
+            <td><iframe src="L7C27.html"></iframe></td>
+            <td><iframe src="L7C28.html"></iframe></td>
+            <td><iframe src="L7C29.html"></iframe></td>
+            <td><iframe src="L7C30.html"></iframe></td>
+            <td><iframe src="L7C31.html"></iframe></td>
+            <td><iframe src="L7C32.html"></iframe></td>
+            <td><iframe src="L7C33.html"></iframe></td>
+            <td><iframe src="L7C34.html"></iframe></td>
+            <td><iframe src="L7C35.html"></iframe></td>
+            <td><iframe src="L7C36.html"></iframe></td>
+            <td><iframe src="L7C37.html"></iframe></td>
+            <td><iframe src="L7C38.html"></iframe></td>
+            <td><iframe src="L7C39.html"></iframe></td>
+            <td><iframe src="L7C40.html"></iframe></td>
+            <td><iframe src="L7C41.html"></iframe></td>
+            <td><iframe src="L7C42.html"></iframe></td>
+            <td><iframe src="L7C43.html"></iframe></td>
+</table>
+
+</body>
+</html>

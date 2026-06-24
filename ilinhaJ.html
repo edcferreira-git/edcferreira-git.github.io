@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela com Iframes</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;   /* impede rolagem */
+            height: 100%;
+        }
+        table {
+            border: 0px solid #3D3938;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        td {
+            border: 1px solid black;
+            padding: 0;
+            height: calc((100vw / 43) * 1.136942675159236);
+
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+
+    <script>
+        function verificarHorario() {
+            const agora = new Date();
+            const segundo = agora.getSeconds();
+
+            if (segundo === 39) {
+                location.reload();
+            }
+        }
+
+        // verifica a cada 1 segundo
+        setInterval(verificarHorario, 1000);
+    </script>
+
+</head>
+<body style="background-color: #54504F; color: white;">
+
+<table>
+            <td><iframe src="L10C1.html"></iframe></td>
+            <td><iframe src="L10C2.html"></iframe></td>
+            <td><iframe src="L10C3.html"></iframe></td>
+            <td><iframe src="L10C4.html"></iframe></td>
+            <td><iframe src="L10C5.html"></iframe></td>
+            <td><iframe src="L10C6.html"></iframe></td>
+            <td><iframe src="L10C7.html"></iframe></td>
+            <td><iframe src="L10C8.html"></iframe></td>
+            <td><iframe src="L10C9.html"></iframe></td>
+            <td><iframe src="L10C10.html"></iframe></td>
+            <td><iframe src="L10C11.html"></iframe></td>
+            <td><iframe src="L10C12.html"></iframe></td>
+            <td><iframe src="L10C13.html"></iframe></td>
+            <td><iframe src="L10C14.html"></iframe></td>
+            <td><iframe src="L10C15.html"></iframe></td>
+            <td><iframe src="L10C16.html"></iframe></td>
+            <td><iframe src="L10C17.html"></iframe></td>
+            <td><iframe src="L10C18.html"></iframe></td>
+            <td><iframe src="L10C19.html"></iframe></td>
+            <td><iframe src="L10C20.html"></iframe></td>
+            <td><iframe src="L10C21.html"></iframe></td>
+            <td><iframe src="L10C22.html"></iframe></td>
+            <td><iframe src="L10C23.html"></iframe></td>
+            <td><iframe src="L10C24.html"></iframe></td>
+            <td><iframe src="L10C25.html"></iframe></td>
+            <td><iframe src="L10C26.html"></iframe></td>
+            <td><iframe src="L10C27.html"></iframe></td>
+            <td><iframe src="L10C28.html"></iframe></td>
+            <td><iframe src="L10C29.html"></iframe></td>
+            <td><iframe src="L10C30.html"></iframe></td>
+            <td><iframe src="L10C31.html"></iframe></td>
+            <td><iframe src="L10C32.html"></iframe></td>
+            <td><iframe src="L10C33.html"></iframe></td>
+            <td><iframe src="L10C34.html"></iframe></td>
+            <td><iframe src="L10C35.html"></iframe></td>
+            <td><iframe src="L10C36.html"></iframe></td>
+            <td><iframe src="L10C37.html"></iframe></td>
+            <td><iframe src="L10C38.html"></iframe></td>
+            <td><iframe src="L10C39.html"></iframe></td>
+            <td><iframe src="L10C40.html"></iframe></td>
+            <td><iframe src="L10C41.html"></iframe></td>
+            <td><iframe src="L10C42.html"></iframe></td>
+            <td><iframe src="L10C43.html"></iframe></td>
+</table>
+
+</body>
+</html>
